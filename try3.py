@@ -28,12 +28,12 @@ st.sidebar.title('Select an application from below')
 
 @st.cache_data
 def patient():
-    patient = pd.read_csv('data/cohort/cohort_icu_readmission_30_I50.csv.gz', compression='gzip', error_bad_lines=False)
+    patient = pd.read_csv('data/cohort_icu_readmission_30_I50.csv.gz', compression='gzip', error_bad_lines=False)
     return patient
 
 @st.cache_data
 def icd():
-    icd = pd.read_csv('data/features/preproc_diag_icu.csv.gz', compression='gzip', error_bad_lines=False)
+    icd = pd.read_csv('data/preproc_diag_icu.csv.gz', compression='gzip', error_bad_lines=False)
     return icd
 
 x = patient()
